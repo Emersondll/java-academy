@@ -128,6 +128,6 @@ Para subir cada aplicativo fora do Compose, veja `frontend/README.md` e `course-
 
 ## Licença
 
-Este projeto está sob a licença MIT. O texto completo está em [LICENSE](LICENSE).
+Este projeto está sob a licença Apache 2.0. O texto completo está em [LICENSE](LICENSE).
 
 Copyright (c) 2026 Emerson Lima
