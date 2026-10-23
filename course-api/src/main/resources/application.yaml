@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  forward-headers-strategy: none
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-binding-errors: never
+    include-exception: false
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/cursos}
+    username: ${SPRING_DATASOURCE_USERNAME:cursos}
+    password: ${SPRING_DATASOURCE_PASSWORD:cursos}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+    placeholder-replacement: false
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:course-local-hmac-secret-with-32-bytes-min}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:720}
+  cors:
+    origins: ${APP_CORS_ORIGINS:http://localhost:3000,http://127.0.0.1:3000}
